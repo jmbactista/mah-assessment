@@ -23,7 +23,7 @@ jobs:
 
       - name: Terraform Init
         id: init
-        run: terraform init 
+        run: terraform init -backend-config="region=${AWS_REGION}"
 
       - name: Terraform Validate
         id: validate
@@ -31,7 +31,7 @@ jobs:
 
       - name: Terraform plan
         id: plan
-        run: terraform plan -backend-config="region=ap-southeast-1"
+        run: terraform plan
           
 #      - name: Terraform Apply
 #        run: terraform apply -auto-approve terraform
