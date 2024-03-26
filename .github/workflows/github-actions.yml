@@ -31,7 +31,7 @@ jobs:
 
       - name: Terraform plan
         id: plan
-        run: terraform plan 
+        run: terraform plan -backend-config="region=ap-southeast-1"
           
 #      - name: Terraform Apply
 #        run: terraform apply -auto-approve terraform
