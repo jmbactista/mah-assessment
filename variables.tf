@@ -1,32 +1,44 @@
-variable "region" {
-  default     = "ap-southeast-1"
-}
-
 variable "cluster_name" {
-  description = "EKS cluster"
-  default     = "assessemnt-eks-cluster"
+  description = "Name of the EKS cluster."
+  type        = string
 }
 
-variable "node_group_name" {
-  description = "EKS node group"
-  default     = "my-nodes"
+variable "cluster_version" {
+  description = "Version of the EKS cluster."
+  type        = string
+}
+
+variable "region" {
+  description = "AWS region where the resources will be provisioned."
+  type        = string
+}
+
+variable "nodegroup_name" {
+  description = "Name of the EKS nodegroup."
+  type        = string
 }
 
 variable "node_type" {
-  default     = "t2.micro"
+  description = "Instance type of the EKS nodes."
+  type        = string
 }
 
 variable "nodes" {
-  description = "Number of nodes in the EKS node group"
-  default     = 2
+  description = "Number of nodes in the EKS nodegroup."
+  type        = number
 }
 
 variable "nodes_min" {
-  description = "Minimum count of nodes"
-  default     = 1
+  description = "Minimum number of nodes in the EKS nodegroup."
+  type        = number
 }
 
 variable "nodes_max" {
-  description = "Maximum count of nodes"
-  default     = 2
+  description = "Maximum number of nodes in the EKS nodegroup."
+  type        = number
+}
+
+variable "managed" {
+  description = "Whether the EKS cluster is managed by AWS."
+  type        = bool
 }
