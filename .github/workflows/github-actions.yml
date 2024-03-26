@@ -50,8 +50,7 @@ jobs:
           eksctl version
 
       - name: Deploy NGINX
-#        run: |
-#          kubectl apply -f /home/runner/work/mah-assessment/mah-assessment/nginx-deployment-service.yaml
         run: |
-          pwd
-          ls
+          kubectl apply -f /home/runner/work/mah-assessment/nginx-deployment-service.yaml
+#          pwd
+#          ls
