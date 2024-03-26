@@ -50,5 +50,6 @@ jobs:
           eksctl version
 
       - name: Deploy NGINX
-        run: |
-          kubectl apply -f ./nginx-deployment-service.yaml
+#        run: |
+#          kubectl apply -f /nginx-deployment-service.yaml
+        run: pwd
