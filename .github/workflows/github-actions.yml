@@ -26,12 +26,12 @@ jobs:
       - name: Validate
         run: |
           terraform validate -chdir=./terraform
-          echo "TF_INITIALIZED=true" >> $GITHUB_ENV
+          echo "TF_VALIDATE=true" >> $GITHUB_ENV
 
       - name: Plan
         run: |
           terraform plan -chdir=./terraform
-          echo "TF_INITIALIZED=true" >> $GITHUB_ENV
+          echo "TF_PLAN=true" >> $GITHUB_ENV
           
 #      - name: Terraform Apply
 #        run: terraform apply -auto-approve terraform
