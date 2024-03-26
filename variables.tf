@@ -1,5 +1,5 @@
 variable "cluster_name" {
-  default     = "-assessment-eks-cluster"
+  default     = "assessment-eks-cluster"
 }
 
 variable "eks_version" {
