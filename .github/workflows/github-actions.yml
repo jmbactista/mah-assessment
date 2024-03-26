@@ -22,15 +22,13 @@ jobs:
         id: init
         run: terraform init 
 
-#      - name: Validate
-#        run: |
-#          terraform validate -chdir=./terraform
-#          echo "TF_VALIDATE=true" >> $GITHUB_ENV
+      - name: Terraform Validate
+        id: validate
+        run: terraform validate 
 
-#      - name: Plan
-#        run: |
-#          terraform plan -chdir=./terraform
-#          echo "TF_PLAN=true" >> $GITHUB_ENV
+      - name: Terraform plan
+        id: plan
+        run: terraform plan 
           
 #      - name: Terraform Apply
 #        run: terraform apply -auto-approve terraform
