@@ -18,11 +18,14 @@ jobs:
         with:
           terraform_version: 1.0.0
 
-      - name: Terraform Init
-        run: terraform init terraform
+      - name: Init
+        run: terraform init
 
-      - name: Terraform Plan
-        run: terraform plan terraform
+      - name: Validate
+        run: terraform validate
 
-      - name: Terraform Apply
-        run: terraform apply -auto-approve terraform
+      - name: Plan
+        run: terraform plan
+
+#      - name: Terraform Apply
+#        run: terraform apply -auto-approve terraform
