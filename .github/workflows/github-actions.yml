@@ -51,7 +51,6 @@ jobs:
 
       - name: Deploy NGINX
         run: |
-          kubectl apply -f /home/runner/work/mah-assessment/mah-assessment/nginx-deployment-service.yaml
-          kubectl apply -f nginx-deployment-service.yaml
+          kubectl apply --dry-run=client -f nginx-deployment-service.yaml
 #          pwd
 #          ls
