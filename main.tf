@@ -81,23 +81,3 @@ resource "aws_vpc" "my_vpc" {
   cidr_block = "10.0.0.0/16"
 }
 
-resource "aws_s3_bucket" "terraform_state_bucket" {
-  bucket = var.s3_bucket_name
-  acl    = "private"
-
-  versioning {
-    enabled = true
-  }
-
-  tags = {
-    Name = "Terraform State Bucket"
-  }
-}
-
-terraform {
-  backend "s3" {
-    bucket         = var.s3_bucket_name
-    key            = "terraform-state-${formatdate("YYYY-MM-DD", timestamp())}.tfstate"
-    region         = var.region
-  }
-}
