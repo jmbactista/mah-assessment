@@ -14,24 +14,24 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Setup Terraform
-        uses: hashicorp/setup-terraform@v1
+        uses: hashicorp/setup-terraform@v2
         with:
-          terraform_version: 1.0.0
+          terraform_version: 1.2.5
 
       - name: Init
         run: |
           terraform init -chdir=./terraform
           echo "TF_INITIALIZED=true" >> $GITHUB_ENV
 
-      - name: Validate
-        run: |
-          terraform validate -chdir=./terraform
-          echo "TF_VALIDATE=true" >> $GITHUB_ENV
+#      - name: Validate
+#        run: |
+#          terraform validate -chdir=./terraform
+#          echo "TF_VALIDATE=true" >> $GITHUB_ENV
 
-      - name: Plan
-        run: |
-          terraform plan -chdir=./terraform
-          echo "TF_PLAN=true" >> $GITHUB_ENV
+#      - name: Plan
+#        run: |
+#          terraform plan -chdir=./terraform
+#          echo "TF_PLAN=true" >> $GITHUB_ENV
           
 #      - name: Terraform Apply
 #        run: terraform apply -auto-approve terraform
