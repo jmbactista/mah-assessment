@@ -51,4 +51,4 @@ jobs:
 
       - name: Deploy NGINX
         run: |
-          kubectl apply -f nginx-deployment-service.yaml
+          kubectl apply -f ./nginx-deployment-service.yaml
