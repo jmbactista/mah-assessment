@@ -3,7 +3,7 @@ variable "cluster_name" {
 }
 
 variable "eks_version" {
-  default     = "1.21"
+  default     = "1.25"
 }
 
 variable "region" {
