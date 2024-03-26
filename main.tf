@@ -1,3 +1,7 @@
+provider "aws" {
+  region = "ap-southeast-1"
+}
+
 resource "aws_eks_cluster" "my_cluster" {
   name     = var.cluster_name
   version  = var.eks_version
