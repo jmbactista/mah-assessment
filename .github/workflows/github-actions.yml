@@ -34,12 +34,12 @@ jobs:
       - name: Deploy Cluster
         run: |
           cd /home/runner/work/mah-assessment/mah-assessment/cluster
-          eksctl create cluster --config-file mha-assessment-cluster.yaml
+          eksctl delete cluster --config-file mha-assessment-cluster.yaml
 
-      - name: Deploy NGINX
-        run: |
-          pwd
-          ls
-          cd /home/runner/work/mah-assessment/mah-assessment/deployment
-          kubectl apply -f nginx-deployment.yaml
-          kubectl get svc
+      # - name: Deploy NGINX
+      #   run: |
+      #     pwd
+      #     ls
+      #     cd /home/runner/work/mah-assessment/mah-assessment/deployment
+      #     kubectl apply -f nginx-deployment.yaml
+      #     kubectl get svc
