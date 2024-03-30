@@ -1,0 +1,32 @@
+---
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: mha-cluster
+  region: ap-southeast-1
+  version: "1.27"
+  tags:
+    Owner: "jmbactista"
+    Environment: assessment
+    Project: assessment
+
+vpc:
+  cidr: 10.0.0.0/16
+  clusterEndpoints:
+    publicAccess:  true
+    privateAccess: true
+
+managedNodeGroups:    # node group for the worker nodes
+  - name: nodegroup-spot-1
+    instanceTypes: ["t3.small"]
+    minSize: 1
+    maxSize: 3
+    desiredCapacity: 1
+    volumeSize: 20
+    privateNetworking: true
+    spot: true
+    tags:
+      Owner: "jmbactista"
+      Environment: assessment
+      Role: workers
