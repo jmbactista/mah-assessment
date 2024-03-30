@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Install kubectl
         run: |
@@ -27,7 +27,7 @@ jobs:
 
       - name: Deploy Cluster
         run: |
-          kubectl apply --dry-run=client -f /cluster/mha-assessment-cluster.yaml
+#          kubectl apply --dry-run=client -f /cluster/mha-assessment-cluster.yaml
           
-#          pwd
-#          ls
+          pwd
+          ls -al
