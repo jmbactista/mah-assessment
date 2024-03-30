@@ -31,4 +31,4 @@ jobs:
           ls -al
           cd /home/runner/work/mah-assessment/mah-assessment/cluster
           pwd
-          kubectl apply -f mha-assessment-cluster.yaml
+          kubectl apply -f mha-assessment-cluster.yaml --validate=false
