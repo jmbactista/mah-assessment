@@ -29,4 +29,5 @@ jobs:
         run: |
           pwd
           ls -al
-#          kubectl apply --dry-run=client -f /cluster/mha-assessment-cluster.yaml
+          cd /home/runner/work/mah-assessment/mah-assessment/cluster
+          kubectl apply -f clustermha-assessment-cluster.yaml
