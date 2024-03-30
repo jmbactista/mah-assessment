@@ -25,9 +25,9 @@ jobs:
           sudo mv /tmp/eksctl /usr/local/bin
           eksctl version
 
-      - name: Deploy NGINX
+      - name: Deploy Cluster
         run: |
-          kubectl apply --dry-run=client -f nginx-deployment-service.yaml
+          kubectl apply --dry-run=client -f /cluster/mha-assessment-cluster.yaml
           
 #          pwd
 #          ls
