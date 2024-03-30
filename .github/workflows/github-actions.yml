@@ -35,3 +35,4 @@ jobs:
         run: |
           cd /home/runner/work/mah-assessment/mah-assessment/cluster
           eksctl create cluster --config-file mha-assessment-cluster.yaml
+          eksctl delete cluster --config-file mha-assessment-cluster.yaml
