@@ -27,7 +27,6 @@ jobs:
 
       - name: Deploy Cluster
         run: |
-#          kubectl apply --dry-run=client -f /cluster/mha-assessment-cluster.yaml
-          
           pwd
           ls -al
+#          kubectl apply --dry-run=client -f /cluster/mha-assessment-cluster.yaml
