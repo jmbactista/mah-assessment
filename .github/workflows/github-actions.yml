@@ -34,4 +34,4 @@ jobs:
       - name: Deploy Cluster
         run: |
           cd /home/runner/work/mah-assessment/mah-assessment/cluster
-          kubectl apply -f mha-assessment-cluster.yaml --validate=false
+          eksctl create cluster --config-file mha-assessment-cluster.yaml
