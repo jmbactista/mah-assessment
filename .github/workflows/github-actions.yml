@@ -38,8 +38,6 @@ jobs:
 
       - name: Deploy NGINX
         run: |
-          pwd
-          ls
           cd /home/runner/work/mah-assessment/mah-assessment/deployment
           kubectl apply -f nginx-deployment.yaml
           kubectl get svc
