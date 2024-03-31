@@ -31,3 +31,15 @@ Test connection
 kubectl get nodes
 kubectl get namespaces
 ```
+
+## NGINX Deployment
+Use the `kubectl apply` command to deploy the yaml for for the Nginx Application. It includes the following to be created:
+- Deployment
+- Service
+
+## NGINX Checking
+This is to check if NGINX is successfully deployed. 
+Run the following command to check the endpoint on the loadbalancer of NGINX then try to hit it on your desired browser.
+```
+kubectl get svc
+```
