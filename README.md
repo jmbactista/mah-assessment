@@ -1,4 +1,4 @@
-## mah-assessment
+## Assessment
 This Repository contains the following:
 - Basic setup of automated creation of EKS Cluster
 - Automated deployment of NGINX which can be accessible publicly
@@ -26,7 +26,6 @@ Run the following to add the newly created EKS Cluster to your local aws eks con
 ```
 aws eks update-kubeconfig --region ap-southeast-1 --name mha-cluster
 ```
-
 Test connection
 ```
 kubectl get nodes
