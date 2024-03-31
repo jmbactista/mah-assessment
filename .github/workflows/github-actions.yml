@@ -34,7 +34,7 @@ jobs:
       - name: Deploy Cluster
         run: |
           cd /home/runner/work/mah-assessment/mah-assessment/cluster
-          eksctl delete cluster --config-file mha-assessment-cluster.yaml
+          eksctl create cluster --config-file mha-assessment-cluster.yaml
 
       - name: Deploy NGINX
         run: |
