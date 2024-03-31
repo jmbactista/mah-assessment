@@ -48,6 +48,13 @@ Run the following command to check the endpoint on the loadbalancer of NGINX the
 ```
 kubectl get svc
 ```
-This is the example output 
-Get the `EXTERNAL-IP` for the `nginx-service`. 
+Get the `EXTERNAL-IP` for the `nginx-service`
+Since it is a `LoadBalancer`, the `EXTERNAL-IP` will be in form of LoadBalancer endpoint. Example endpoint: `a5d633587927043509e889eb839261da-test.ap-southeast-1.elb.amazonaws.com`
+
 NOTE: If not available or still pending, you can check the loadbalancer in AWS Console to get the LoadBalancer Endpoint for you to be able to access the Nginx publicly.
+
+## Cluster Cleanup
+To remove everything including the `EKS Cluster` and `NGINX APP`. Run the following `eksctl delete` and it will remove all resources created that has been created.
+```
+eksctl delete cluster --config-file mha-assessment-cluster.yaml
+```
