@@ -28,8 +28,7 @@ aws eks update-kubeconfig --region ap-southeast-1 --name mha-cluster
 ```
 Test connection
 ```
-kubectl get nodes
-kubectl get namespaces
+kubectl get pods -A
 ```
 
 ## NGINX Deployment
