@@ -48,8 +48,9 @@ Run the following command to check the endpoint on the loadbalancer of NGINX the
 ```
 kubectl get svc
 ```
-Get the `EXTERNAL-IP` for the `nginx-service`
-Since it is a `LoadBalancer`, the `EXTERNAL-IP` will be in form of LoadBalancer endpoint. Example endpoint: `a5d633587927043509e889eb839261da-test.ap-southeast-1.elb.amazonaws.com`
+Get the `EXTERNAL-IP` for the `nginx-service`.
+Since it is a `LoadBalancer`, the `EXTERNAL-IP` will be in form of LoadBalancer endpoint. 
+Example endpoint: `a5d633587927043509e889eb839261da-test.ap-southeast-1.elb.amazonaws.com`
 
 NOTE: If not available or still pending, you can check the loadbalancer in AWS Console to get the LoadBalancer Endpoint for you to be able to access the Nginx publicly.
 
