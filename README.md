@@ -37,6 +37,11 @@ Use the `kubectl apply` command to deploy the yaml for for the Nginx Application
 - Deployment
 - Service
 
+For the `NGINX Deployment` run the following command:
+```
+kubectl apply -f deployment/nginx-deployment.yaml
+```
+
 ## NGINX Checking
 This is to check if NGINX is successfully deployed. 
 Run the following command to check the endpoint on the loadbalancer of NGINX then try to hit it on your desired browser.
